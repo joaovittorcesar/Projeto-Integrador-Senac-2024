@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eletro Mix - Carrinho</title>
+    <link rel="icon" href="../assets/img/logoIcon.ico" />
+    <link rel="stylesheet" href="../assets/css/carrinho.css" />
+    <link rel="stylesheet" href="../assets/css/mainLayout.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/themes/mint.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="loading-screen">
+      <div class="loading-circle"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light py-3 fixed-top">
+      <div class="container-fluid">
+        <a href="../index.html">
+          <img
+            src="../assets/img/logo1.png"
+            alt="Logo da loja Eletro Mix"
+            class="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span><i id="bar" class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav_link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_link" href="../pages/about.html">Sobre nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_link" href="../pages/loja.html">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_link active" href="./pages/carrinho.html"
+                >Carrinho</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav_link" href="#">Contato</a>
+            </li>
+            <li class="nav-item search-container">
+              <input
+                id="searchInput"
+                type="text"
+                class="search-input"
+                placeholder="Pesquisar..."
+              />
+              <div id="results" class="results"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="container pt-5 mt-5">
+      <h3 class="font-weight-bold pt-5">Sua sacola</h3>
+      <hr />
+    </section>
+
+    <section id="cart-container" class="container my-5">
+      <table width="100%">
+        <thead>
+          <tr>
+            <td>Remover</td>
+            <td>Imagem</td>
+            <td>Produto</td>
+            <td>Preço</td>
+            <td>Quantidade</td>
+            <td>Total</td>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Linha 1 -->
+          <tr>
+            <td>
+              <a href=""><i class="fas fa-trash-alt"></i></a>
+            </td>
+            <td>
+              <img src="../assets/img/featured/buy/product/1.jpeg" alt="" />
+            </td>
+            <td><h6>Fone Bluetooth Knup KP-367 Hi-Fi SD - Sem Fio</h6></td>
+            <td>
+              <h6><b>R$ 89,79</b></h6>
+            </td>
+            <td><input class="w-25 pl-1" value="1" min="1" type="number" /></td>
+            <td>
+              <h6><b>R$ 89,79</b></h6>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="cart-bottom" class="container">
+      <div class="row">
+        <div class="coupon col-lg-6 col-md-6 col-12 mb-4">
+          <div>
+            <h5>CUPOM</h5>
+            <p>Digite aqui seu cupom de desconto caso tenha um:</p>
+            <input type="text" placeholder="Código do cupom" />
+            <button>APLICAR CUPOM</button>
+          </div>
+        </div>
+        <div class="total col-lg-6 col-md-6 col-12">
+          <div>
+            <h5>TOTAL DA COMPRA</h5>
+            <div class="d-flex justify-content-between">
+              <h6>Subtotal</h6>
+              <p>R$ 89,79</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h6>Frete</h6>
+              <p>R$ 10,50</p>
+            </div>
+            <hr class="second-hr" />
+            <div class="d-flex justify-content-between">
+              <h6>TOTAL</h6>
+              <p><b>R$ 100,29</b></p>
+            </div>
+            <button id="buy-now-button" class="ml-auto">COMPRAR AGORA</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-5 py-5">
+      <div class="container">
+        <div class="row">
+          <div
+            class="footer-one col-lg-4 col-md-6 col-12 mb-3 d-flex flex-column align-items-center text-center"
+          >
+            <img
+              src="../assets/img/logo1.png"
+              alt="Logo da loja Eletro Mix"
+              class="logoF img-fluid pb-5 mb-4"
+            />
+            <p>
+              A <strong>Eletro Mix.</strong> é uma loja on-line de eletrônicos
+              fictícia, criada por
+              <a href="https://github.com/joaovittorcesar" target="_blank"
+                >João Vittor Cesar</a
+              >
+              em 2024, para o projeto integrador do Senac.
+            </p>
+          </div>
+          <div
+            class="footer-one col-lg-4 col-md-6 col-12 mb-3 d-flex flex-column align-items-center text-center"
+          >
+            <h5 class="pb-5">Categorias</h5>
+            <ul class="list-unstyled">
+              <li><a href="">Ring Lights</a></li>
+              <li><a href="">Carregadores</a></li>
+              <li><a href="">Fones de Ouvido</a></li>
+              <li><a href="">Câmeras</a></li>
+              <li><a href="">Laptops</a></li>
+              <li><a href="">Smartphones</a></li>
+              <li><a href="">Acessórios para Computadores</a></li>
+            </ul>
+          </div>
+          <div
+            class="footer-one col-lg-4 col-md-6 col-12 mb-3 d-flex flex-column align-items-center text-center"
+          >
+            <h5 class="pb-5">Contate-nos</h5>
+            <div>
+              <h6 class="text-capitalize">Endereço</h6>
+              <p>Rua 123, Cidade, Estado</p>
+            </div>
+            <div>
+              <h6 class="text-capitalize">Telefone</h6>
+              <p>(12) 12345-6789</p>
+            </div>
+            <div>
+              <h6 class="text-capitalize">E-mail</h6>
+              <p><a href="mailto:abccd@hotmail.com">abccd@hotmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/carrinho.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

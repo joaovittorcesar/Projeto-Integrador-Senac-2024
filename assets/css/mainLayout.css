@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main-color-btn-hover: rgb(255, 211, 98);
+  --stars-color: rgb(255, 199, 56);
+  --main-color: rgb(255, 183, 0);
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+    height: 0;
+    background-color: #1f1f1f;
+    overflow: visible
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border: 4px solid #1f1f1f;
+    border-radius: 50px
+}
+
+body::-webkit-scrollbar-button {
+    height: 0;
+    width: 0
+}
+
+body::-webkit-scrollbar-track {
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 0 0 0 4px
+}
+
+*:focus {
+  outline: none !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1d1d1d;
+}
+
+h6 {
+  color: #d8d8d8;
+}
+
+bMain {
+  color: var(--main-color);
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.logoF {
+  width: 240px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 250px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  .logo {
+    width: 300px;
+  }
+}
+
+@media (min-width: 993px) {
+  .logo {
+    width: 200px;
+  }
+}
+
+button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 0.5rem !important;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  background-color: #1d1d1d;
+  color: aliceblue;
+  padding: 13px 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #353535;
+}
+
+.navbar {
+  font-size: 14px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #222222;
+  padding: 10px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1000px;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar .nav-item {
+  margin: 0 10px;
+}
+
+.navbar .nav-item a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+  padding: 10px 10px;
+  border-radius: 4px;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar .nav-item a:hover,
+.navbar .nav-item a.active {
+  color: var(--main-color);
+  background-color: #333333;
+}
+
+.navbar i {
+  font-size: 2rem;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: block;
+}
+
+#results {
+  display: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  color: #ffffff;
+  background-color: #222222;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+  left: 50%;
+}
+
+.result-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#results.show {
+  display: block;
+}
+
+.result-item:hover {
+  background-color: #222222;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar .nav-item {
+    margin: 5px 0;
+  }
+
+  #searchInput {
+    max-width: 60%;
+    margin: 20px auto;
+    position: relative
+  }
+
+  #results {
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    position: relative
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    font-size: 1rem;
+  }
+
+  #searchInput {
+    max-width: 80%;
+    margin: 20px auto;
+  }
+
+  #results {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    font-size: 1rem;
+  }
+
+  #searchInput {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  #results {
+    max-width: 600px;
+  }
+}
+
+#bar {
+  font-size: 1.5rem;
+  padding: 7px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+  color: black;
+}
+
+#bar:hover,
+#bar.active {
+  color: #fff;
+}
+
+@media only screen and (max-width: 991px) {
+  body nav div button:hover,
+  body nav div button:focus {
+    background-color: black;
+  }
+
+  body nav div button:hover #bar,
+  body nav div button:focus #bar {
+    color: #fff;
+  }
+
+  #navbarSupportedContent ul {
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #navbarSupportedContent ul li {
+    padding: 10px;
+  }
+}
+
+hr {
+  width: 280px;
+  min-height: 4px;
+  background-color: var(--main-color);
+}
+
+.buy-btn {
+  background: var(--main-color);
+  transform: translateY(20px);
+  opacity: 0;
+  border-radius: 0.3rem;
+  transition: 0.3s all;
+}
+
+.buy-btn {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.buy-btn:hover {
+  background-color: var(--main-color-btn-hover);
+}
+
+.stars {
+  padding: 10px 0;
+}
+
+.stars i {
+  font-size: 0.8rem;
+  color: var(--stars-color);
+}
+
+#products > nav > ul > li.page-item.active > a {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
+#products > nav > ul > li:nth-child(n):hover > a {
+  background-color: var(--main-color);
+  border-color: black;
+  color: white;
+  font-weight: 600;
+}
+
+.pagination a {
+  color: black;
+}
+
+.product a {
+  color: white;
+  text-decoration: none;
+}
+
+.product a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+select {
+  display: block;
+  padding: 5px 10px;
+}
+
+.singleProduct input {
+  width: 50px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #222222;
+}
+
+footer h5 {
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+footer h6 {
+  color: white;
+  font-weight: 500;
+}
+
+footer li {
+  padding-bottom: 4px;
+}
+
+footer p {
+  color: rgb(204, 204, 204);
+  font-size: 0.9rem;
+}
+
+footer a {
+  font-size: 1rem;
+  color: rgb(204, 204, 204);
+}
+
+footer .row a:hover {
+  color: white;
+}

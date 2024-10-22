@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo - Comprar Agora</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/themes/mint.min.css"
+    />
+    <style>
+      /* Estilo para o botão */
+      .ml-auto {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .ml-auto:hover {
+        background-color: #218838;
+      }
+
+      /* Tela de carregamento com círculo */
+      #loading-screen {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(128, 128, 128, 0.8);
+        z-index: 9999;
+        text-align: center;
+        backdrop-filter: blur(5px);
+      }
+
+      /* Círculo animado */
+      .loading-circle {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        margin: -40px 0 0 -40px; /* Centraliza o círculo */
+        border: 8px solid rgba(255, 255, 255, 0.3);
+        border-top: 8px solid #fff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      /* Animação de rotação */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="ml-auto">COMPRAR AGORA</button>
+
+    <!-- Tela de carregamento -->
+    <div id="loading-screen">
+      <div class="loading-circle"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script>
+      // Função para exibir notificação, efeito de carregamento e redirecionar
+      document.querySelector(".ml-auto").addEventListener("click", function () {
+        // Exibe a notificação com Noty (1 segundo)
+        new Noty({
+          text: "Redirecionando...",
+          type: "info",
+          layout: "topRight",
+          timeout: 1000, // Notificação desaparece após 1 segundo
+        }).show();
+
+        // Exibe a tela de carregamento com círculo por 2 segundos
+        const loadingScreen = document.getElementById("loading-screen");
+        loadingScreen.style.display = "block";
+
+        // Aguarda 2 segundos antes de redirecionar
+        setTimeout(function () {
+          // Redireciona para o link desejado
+          window.location.href = "https://abc.com";
+
+          // Esconde a tela de carregamento após o redirecionamento
+          loadingScreen.style.display = "none";
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>

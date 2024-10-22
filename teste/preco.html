@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Preço</title>
+    <style>
+      .p-price {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      /* Ajuste o z-index do Toastify */
+      .toastify {
+        z-index: 9999999 !important; /* Garante que Toastify está acima de outros elementos */
+      }
+    </style>
+    <!-- Inclua o CSS do Toastify -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body>
+    <label for="productQuantity">Quantidade:</label>
+    <input id="productQuantity" type="number" value="1" min="1" max="12" />
+
+    <h2>
+      <h4 id="price" class="p-price">R$89,79</h4>
+    </h2>
+
+    <!-- Inclua o JS do Toastify -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+      // Defina o preço unitário e os limites de quantidade
+      const unitPrice = 89.79;
+      const minQuantity = 1;
+      const maxQuantity = 12;
+
+      function updatePrice() {
+        // Obtenha o valor do input
+        const quantityInput = document.getElementById("productQuantity");
+        let quantity = parseInt(quantityInput.value, 10);
+
+        // Verifique se a quantidade está dentro dos limites permitidos
+        if (quantity < minQuantity) {
+          quantity = minQuantity;
+          Toastify({
+            text: `A quantidade mínima é ${minQuantity}.`,
+            duration: 3000,
+            close: true,
+            gravity: "top", // "top" or "bottom"
+            position: "right", // "left", "center" or "right"
+            backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+            stopOnFocus: true, // Não fechar a notificação se o usuário passar o mouse sobre ela
+          }).showToast();
+          quantityInput.value = quantity;
+        } else if (quantity > maxQuantity) {
+          quantity = maxQuantity;
+          Toastify({
+            text: `A quantidade máxima é ${maxQuantity}.`,
+            duration: 3000,
+            close: true,
+            gravity: "top", // "top" or "bottom"
+            position: "right", // "left", "center" or "right"
+            backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+            stopOnFocus: true, // Não fechar a notificação se o usuário passar o mouse sobre ela
+          }).showToast();
+          quantityInput.value = quantity;
+        }
+
+        // Calcule o preço total
+        let totalPrice = unitPrice * quantity;
+
+        // Atualize o HTML com o valor calculado
+        document.getElementById("price").innerText = `R$${totalPrice.toFixed(
+          2
+        )}`;
+      }
+
+      // Adicione um ouvinte de eventos para atualizar o preço quando o valor do input mudar
+      document
+        .getElementById("productQuantity")
+        .addEventListener("input", updatePrice);
+
+      // Atualize o preço inicialmente com o valor padrão
+      updatePrice();
+    </script>
+  </body>
+</html>

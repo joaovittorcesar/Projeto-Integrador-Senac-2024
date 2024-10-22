@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eletro Mix - Loja</title>
+    <link rel="icon" href="../assets/img/logoIcon.ico" />
+    <link rel="stylesheet" href="../assets/css/loja.css" />
+    <link rel="stylesheet" href="../assets/css/mainLayout.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light py-3 fixed-top">
+    <div class="container-fluid">
+      <a href="../index.html">
+<img src="../assets/img/logo1.png" alt="Logo da loja Eletro Mix" class="logo" />
+</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span><i id="bar" class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav_link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav_link" href="../pages/about.html">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav_link active" href="/pages/loja.html">Produtos</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav_link" href="../pages/carrinho.html">
+                Carrinho
+              </a>
+            </li>
+          <li class="nav-item">
+            <a class="nav_link" href="#">Contato</a>
+          </li>
+          <li class="nav-item search-container">
+            <input id="searchInput" type="text" class="search-input" placeholder="Pesquisar...">
+            <div id="results" class="results"></div>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="my-5 py-5" id="products">
+    <div class="container mt-5 py-5">
+      <h3 class="font-weight-bold">Nossos Produtos</h3>
+      <hr class="" />
+      <p>Aqui você pode ver os todos os produtos.</p>
+    </div>
+
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/buy/product/1.jpeg" alt="" />
+        <h5 class="p-name">Fone Bluetooth Knup KP-367 Hi-Fi SD - Sem Fio</h5>
+        <h4 class="p-price">R$89,79</h4>
+        <a href="./produto.html">
+          <button class="buy-btn text-uppercase">Compre Agora</button></a
+        >
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/buy/2.jpg" alt="" />
+        <div class="stars"></div>
+        <h5 class="p-name">Câmera De Segurança Wifi</h5>
+        <h4 class="p-price">R$94,99</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/buy/3.jpg" alt="" />
+        <h5 class="p-name">Maquina De Fumaça</h5>
+        <h4 class="p-price">R$248,39</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/buy/4.jpg" alt="" />
+        <div class="stars">
+        </div>
+        <h5 class="p-name">Luminaria Lua Cheia 3D</h5>
+        <h4 class="p-price">R$89,70</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+    </div>
+
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/dj/1.jpg" alt="" />
+        <h5 class="p-name">Moving Beam 300w 9r Com Borda Led</h5>
+        <h4 class="p-price">R$5.830,00</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/dj/2.jpg" alt="" />
+        <h5 class="p-name">	Moving Head Beam 4 X 25w Caleidoscópio 100w Rgbw</h5>
+        <h4 class="p-price">R$1.359,00</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/dj/3.jpg" alt="" />
+        <h5 class="p-name">Kit Globo Espelhado De Festa 30cm+motor Com Correntinha</h5>
+        <h4 class="p-price">R$210,00</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/dj/4.jpg" alt="" />
+        <h5 class="p-name">Strobo Canhão De 36 Leds 3w 100w Dmx 512 Master Slave Festa</h5>
+        <h4 class="p-price">R$149,50</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+    </div>
+
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/gamers/1.jpg" alt="" />
+        <h5 class="p-name">Fita Led Rgb 3528 Rolo 5m Com Fonte E Controle - Waka</h5>
+        <h4 class="p-price">R$25,00</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/gamers/2.jpg" alt="" />
+        <h5 class="p-name">Amazon Echo Dot 5° Gen com Relógio</h5>
+        <h4 class="p-price">R$329,39</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/gamers/3.jpg" alt="" />
+        <h5 class="p-name">Headset Gamer Havit H2232D, RGB, Drivers 50mm</h5>
+        <h4 class="p-price">R$117,64</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/gamers/4.jpg" alt="" />
+        <h5 class="p-name">Teclado Gamer Multi TC242 Slim, ABNT, Preto e Vermelho</h5>
+        <h4 class="p-price">R$24,90</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/gamers/5.jpg" alt="" />
+        <h5 class="p-name">Mouse Gamer Sem Fio Redragon Storm Pro, Wireless, Preto</h5>
+        <h4 class="p-price">R$208,59</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/gamers/6.jpg" alt="" />
+        <h5 class="p-name">Microfone Condensador Com Suporte Tripé Xtrad Ch0803 Cor Preto</h5>
+        <h4 class="p-price">R$38,99</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="../assets/img/featured/gamers/7.jpg" alt="" />
+        <h5 class="p-name">Hub Usb Cabo Extensor Régua Usb 3.0 / 2.0 7 portas High Speed Hd Pen Drive Pc</h5>
+        <h4 class="p-price">R$22,89</h4>
+        <button class="buy-btn text-uppercase">Compre Agora</button>
+      </div>
+    </div>
+
+    <nav class="row mx-auto mt-5 container" aria-label="...">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <span class="page-link">Anterior</span>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item" aria-current="page">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Próximo</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <footer class="py-5">
+    <div class="container">
+    <div class="row">
+      <div class="footer-one col-lg-4 col-md-6 col-12 mb-3 d-flex flex-column align-items-center text-center">
+        <img src="../assets/img/logo1.png" alt="Logo da loja Eletro Mix" class="logoF img-fluid pb-5 mb-4" />
+        <p>
+          A <strong>Eletro Mix.</strong> é uma loja on-line de eletrônicos fictícia, criada por
+          <a href="https://github.com/joaovittorcesar" target="_blank">João Vittor Cesar</a>
+          em 2024, para o projeto integrador do Senac.
+        </p>
+      </div>
+
+      <div class="footer-one col-lg-4 col-md-6 col-12 mb-3 d-flex flex-column align-items-center text-center">
+        <h5 class="pb-5">Categorias</h5>
+        <ul class="list-unstyled">
+          <li><a href="">Ring Lights</a></li>
+          <li><a href="">Carregadores</a></li>
+          <li><a href="">Fones de Ouvido</a></li>
+          <li><a href="">Câmeras</a></li>
+          <li><a href="">Laptops</a></li>
+          <li><a href="">Smartphones</a></li>
+          <li><a href="">Acessórios para Computadores</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-one col-lg-4 col-md-6 col-12 mb-3 d-flex flex-column align-items-center text-center">
+        <h5 class="pb-5">Contate-nos</h5>
+        <div>
+          <h6 class="text-capitalize">Endereço</h6>
+          <p>Rua 123, Cidade, Estado</p>
+        </div>
+
+        <div>
+          <h6 class="text-capitalize">Telefone</h6>
+          <p>(12) 12345-6789</p>
+        </div>
+
+        <div>
+          <h6 class="text-capitalize">E-mail</h6>
+          <p><a href="mailto:abccd@hotmail.com">abccd@hotmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

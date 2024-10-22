@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Busca com Sugestões</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      #searchInput {
+        padding: 10px;
+        width: 100%;
+        max-width: 600px; /* Aumenta o máximo para telas maiores */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px; /* Espaçamento inferior */
+      }
+
+      #results {
+        display: none;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        max-height: 300px;
+        overflow-y: auto;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width: 100%;
+        max-width: 600px; /* Aumenta o máximo para telas maiores */
+      }
+
+      .result-item {
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #results.show {
+        display: block;
+      }
+
+      .result-item:hover {
+        background-color: #f9f9f9;
+      }
+
+      /* Estilização responsiva */
+      @media (max-width: 600px) {
+        #searchInput {
+          max-width: 100%;
+        }
+
+        #results {
+          max-width: 100%;
+        }
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        #searchInput {
+          max-width: 100%;
+        }
+
+        #results {
+          max-width: 100%;
+        }
+      }
+
+      @media (min-width: 993px) {
+        #searchInput {
+          max-width: 600px; /* Ajuste para telas maiores */
+        }
+
+        #results {
+          max-width: 600px; /* Ajuste para telas maiores */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="searchInput" placeholder="Buscar..." />
+    <div id="results"></div>
+    <script src="./main.js"></script>
+  </body>
+</html>
